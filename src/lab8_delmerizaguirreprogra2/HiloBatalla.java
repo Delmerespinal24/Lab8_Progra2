@@ -82,6 +82,13 @@ public class HiloBatalla extends Thread {
                 } else {
                     jugador1.setSalud(jugador1.getSalud() - (jugador2.getPoder()));
                 }
+                p1.setValue(jugador1.getSalud());
+                p2.setValue(jugador2.getSalud());
+                
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                }
             }
         }
     }

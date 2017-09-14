@@ -535,7 +535,7 @@ public class Principal extends javax.swing.JFrame {
         pb_j1.setValue(100);
         pb_j1.setStringPainted(true);
 
-        jButton9.setText("Matarse a verga");
+        jButton9.setText("Comienza la batalla");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -906,6 +906,11 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem4.setText("About");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem4);
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
@@ -1292,8 +1297,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-    
-        
+        hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+        hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+        hb1.start();
+        hb2.start();
+        /*  
         if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Salamandras) {
             hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
             hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
@@ -1405,9 +1413,15 @@ public class Principal extends javax.swing.JFrame {
 
             hb1.start();
             hb2.start();
-        }
+        }*/
 
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        JOptionPane.showMessageDialog(this, "Cada cien años las hadas se reunen para comenzar una mortifera batalla\n"
+                + "para decidir que sera la siguiente la siguiente instructura del lab de progra 2\n"
+                + "La batalla comienza ahora!!");
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
