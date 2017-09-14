@@ -8,6 +8,14 @@ public class Hada {
     private int salud;
     private int poder;
 
+    public Hada(String Nombre, double Altura, int Edad, int salud, int poder) {
+        this.Nombre = Nombre;
+        this.Altura = Altura;
+        this.Edad = Edad;
+        this.salud = salud;
+        this.poder = poder;
+    }
+    
     public String getNombre() {
         return Nombre;
     }
