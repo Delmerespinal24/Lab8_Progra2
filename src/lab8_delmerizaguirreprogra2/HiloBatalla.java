@@ -13,7 +13,9 @@ public class HiloBatalla extends Thread {
         this.p2 = p2;
         this.jugador1 = player1;
         this.jugador2 = player2;
+        p1.setMaximum(jugador1.getSalud());
         p1.setValue(jugador1.getSalud());
+        p2.setMaximum(jugador2.getSalud());
         p2.setValue(jugador2.getSalud());
     }
 
