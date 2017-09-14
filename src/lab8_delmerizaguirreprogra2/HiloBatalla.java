@@ -1,5 +1,6 @@
 package lab8_delmerizaguirreprogra2;
 
+import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 
 public class HiloBatalla extends Thread {
@@ -84,6 +85,15 @@ public class HiloBatalla extends Thread {
                 }
                 p1.setValue(jugador1.getSalud());
                 p2.setValue(jugador2.getSalud());
+                
+                if(jugador1.getSalud() < 0){
+                    JOptionPane.showMessageDialog(null, "Gano: " + jugador1.getNombre());
+                    vive = false;
+                }
+                if(jugador2.getSalud() < 0){
+                    JOptionPane.showMessageDialog(null, "Gano: " + jugador2.getNombre());
+                    vive = false;
+                }
                 
                 try {
                     Thread.sleep(1000);
