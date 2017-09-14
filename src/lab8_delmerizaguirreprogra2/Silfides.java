@@ -2,14 +2,16 @@ package lab8_delmerizaguirreprogra2;
 
 import javax.swing.JOptionPane;
 
-public class Silfides {
+public class Silfides extends Hada{
 
     private int cant_alas;
 
-    public Silfides(int cant_alas) {
+    public Silfides(int cant_alas, String Nombre, double Altura, int Edad, int salud, int poder) {
+        super(Nombre, Altura, Edad, salud, poder);
         this.cant_alas = cant_alas;
     }
 
+     
     public int getCant_alas() {
         return cant_alas;
     }
