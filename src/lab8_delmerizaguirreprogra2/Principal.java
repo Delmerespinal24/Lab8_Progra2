@@ -18,7 +18,6 @@ public class Principal extends javax.swing.JFrame {
 
     private AdminBinarios AB = new AdminBinarios();
     HiloBatalla hb1;
-    HiloBatalla hb2;
 
     public Principal() {
 
@@ -1298,122 +1297,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-        hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
         hb1.start();
-        hb2.start();
-        /*  
-        if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Salamandras) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Hamadriades) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-
-        if (hb1.getPlayer1() instanceof Salamandras && hb2.getPlayer2() instanceof Silfides) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Salamandras && hb2.getPlayer2() instanceof Hamadriades) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Salamandras && hb2.getPlayer2() instanceof Salamandras) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Lamias) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Silfides) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb1.start();
-            hb2.start();
-        }
-
-        if (hb1.getPlayer1() instanceof Lamias && hb2.getPlayer2() instanceof Silfides) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-
-        if (hb1.getPlayer1() instanceof Lamias && hb2.getPlayer2() instanceof Salamandras) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Salamandras && hb2.getPlayer2() instanceof Lamias) {
-           hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-
-        if (hb1.getPlayer1() instanceof Lamias && hb2.getPlayer2() instanceof Hamadriades) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Lamias && hb2.getPlayer2() instanceof Lamias) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Silfides && hb2.getPlayer2() instanceof Lamias) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Silfides && hb2.getPlayer2() instanceof Salamandras) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Silfides && hb2.getPlayer2() instanceof Hamadriades) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }
-        if (hb1.getPlayer1() instanceof Silfides && hb2.getPlayer2() instanceof Silfides) {
-            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
-
-            hb1.start();
-            hb2.start();
-        }*/
 
     }//GEN-LAST:event_jButton9ActionPerformed
 
