@@ -8,7 +8,7 @@ public class Silfides extends Hada{
 
     public Silfides(int cant_alas, String Nombre, double Altura, int Edad, int salud, int poder) {
         super(Nombre, Altura, Edad, salud, poder);
-        this.cant_alas = cant_alas;
+        setCant_alas(cant_alas);
     }
 
      
@@ -20,9 +20,14 @@ public class Silfides extends Hada{
         if (cant_alas >= 6) {
             this.cant_alas = cant_alas;
         } else {
-            JOptionPane.showMessageDialog(null, "El numero de alas debe ser mayor o igual a 6");
+            JOptionPane.showMessageDialog(null, "El numero de alas debe ser mayor o igual a 6, se ha cambiado a 6");
             this.cant_alas = 6;
         }
+    }
+    
+      @Override
+    public String toString() {
+        return "Silfides{" + getNombre() +'}';
     }
 
 }

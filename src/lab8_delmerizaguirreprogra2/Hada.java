@@ -1,7 +1,13 @@
 
 package lab8_delmerizaguirreprogra2;
 
-public class Hada {
+import java.io.Serializable;
+
+/**
+ *
+ * @author Delmer
+ */
+public class Hada implements Serializable {
     private String Nombre;
     private double Altura;
     private int Edad;

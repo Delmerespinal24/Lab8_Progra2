@@ -21,5 +21,10 @@ public class Hamadriades extends Hada{
     public void setArbol(int arbol) {
         this.arbol = arbol;
     }
+    
+      @Override
+    public String toString() {
+        return "Hamadriades{" + getNombre() +'}';
+    }
 
 }

@@ -16,7 +16,7 @@ public class Salamandras extends Hada{
 
     public Salamandras(int cant_alas, String Nombre, double Altura, int Edad, int salud, int poder) {
         super(Nombre, Altura, Edad, salud, poder);
-        this.cant_alas = cant_alas;
+        setCant_alas(cant_alas);
     }
 
     public int getCant_alas() {
@@ -27,8 +27,14 @@ public class Salamandras extends Hada{
         if (cant_alas >= 16) {
             this.cant_alas = cant_alas;
         } else {
-            JOptionPane.showMessageDialog(null, "La cantidad de alas debe ser mayor o igual a 16");
+            JOptionPane.showMessageDialog(null, "La cantidad de alas debe ser mayor o igual a 16, se ha cambiado a 16");
+            this.cant_alas = 16;
         }
+    }
+    
+      @Override
+    public String toString() {
+        return "Salamandras{" + getNombre() +'}';
     }
 
     

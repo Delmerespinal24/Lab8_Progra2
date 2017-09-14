@@ -16,8 +16,8 @@ public class Lamias extends Hada {
 
     public Lamias(int logitud_aleta, int numero_branquias, String Nombre, double Altura, int Edad, int salud, int poder) {
         super(Nombre, Altura, Edad, salud, poder);
-        this.logitud_aleta = logitud_aleta;
-        this.numero_branquias = numero_branquias;
+        setLogitud_aleta(logitud_aleta);
+        setNumero_branquias(numero_branquias);
     }
 
     public double getLogitud_aleta() {
@@ -28,7 +28,7 @@ public class Lamias extends Hada {
         if (logitud_aleta <= 5) {
             this.logitud_aleta = logitud_aleta;
         } else {
-            JOptionPane.showMessageDialog(null, "La longitud de la aleta debe ser menor o igual a 5");
+            JOptionPane.showMessageDialog(null, "La longitud de la aleta debe ser menor o igual a 5, Se ha cambiado a 5");
             this.logitud_aleta = 5;
         }
     }
@@ -41,9 +41,17 @@ public class Lamias extends Hada {
         if (numero_branquias <= 8) {
             this.numero_branquias = numero_branquias;
         } else {
-            JOptionPane.showMessageDialog(null, "El numero de branquias debe ser menor o igual a 8");
+            JOptionPane.showMessageDialog(null, "El numero de branquias debe ser menor o igual a 8, se ha cambiado a 8");
+            this.numero_branquias = 8;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Lamias{" + getNombre() +'}';
+    }
+    
+    
 
   
 }

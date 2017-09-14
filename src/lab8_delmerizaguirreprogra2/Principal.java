@@ -6,6 +6,7 @@
 package lab8_delmerizaguirreprogra2;
 
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -16,9 +17,11 @@ import javax.swing.JOptionPane;
 public class Principal extends javax.swing.JFrame {
 
     private AdminBinarios AB = new AdminBinarios();
-    
+    HiloBatalla hb1;
+    HiloBatalla hb2;
+
     public Principal() {
-        
+
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -48,16 +51,7 @@ public class Principal extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel33 = new javax.swing.JLabel();
         cb_lamias = new javax.swing.JComboBox<>();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
-        tf_nombreHamadrades1 = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        tf_edadHamadrades1 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
-        tf_alturaHamadrade1 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
-        jLabel34 = new javax.swing.JLabel();
-        cb_Hamadrades = new javax.swing.JComboBox<>();
+        jButton10 = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         tf_nombreSilfides1 = new javax.swing.JTextField();
@@ -70,6 +64,7 @@ public class Principal extends javax.swing.JFrame {
         tf_NAlasSilfides1 = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
         cb_silfides = new javax.swing.JComboBox<>();
+        jButton11 = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         tf_nombreSalamandra1 = new javax.swing.JTextField();
@@ -81,7 +76,27 @@ public class Principal extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         tf_NAlasSalamandras1 = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        cb_Salamandras = new javax.swing.JComboBox<>();
+        cb_salamandras = new javax.swing.JComboBox<>();
+        jButton12 = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        tf_nombreHamadrades1 = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        tf_edadHamadrades1 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        tf_alturaHamadrade1 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        jLabel34 = new javax.swing.JLabel();
+        cb_hamadrades = new javax.swing.JComboBox<>();
+        jButton13 = new javax.swing.JButton();
+        jd_battleField = new javax.swing.JDialog();
+        jPanel1 = new javax.swing.JPanel();
+        cb_j2 = new javax.swing.JComboBox<>();
+        cb_j1 = new javax.swing.JComboBox<>();
+        jLabel37 = new javax.swing.JLabel();
+        pb_j2 = new javax.swing.JProgressBar();
+        pb_j1 = new javax.swing.JProgressBar();
+        jButton9 = new javax.swing.JButton();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -153,129 +168,95 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel33.setText("Lamias");
 
+        jButton10.setBackground(new java.awt.Color(255, 0, 0));
+        jButton10.setText("Eliminar");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton10)
+                .addContainerGap())
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(103, 103, 103)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel20)
-                        .addGroup(jPanel8Layout.createSequentialGroup()
-                            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel18)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel19)
-                                .addComponent(jLabel33))
-                            .addGap(5, 5, 5)))
-                    .addComponent(jLabel21))
-                .addGap(59, 59, 59)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_NBranquiasLamias1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_nombreLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_alturaLamias1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_edadLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_AletasLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cb_lamias, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(261, Short.MAX_VALUE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(285, 285, 285)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel19))
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_AletasLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_NBranquiasLamias1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel18))
+                                .addGap(33, 33, 33)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tf_nombreLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tf_alturaLamias1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tf_edadLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel33)
+                                .addGap(45, 45, 45)
+                                .addComponent(cb_lamias, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel33)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel33))
                     .addComponent(cb_lamias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(tf_nombreLamia1))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(7, 7, 7)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_nombreLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(tf_edadLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18))
+                .addGap(13, 13, 13)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(tf_edadLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(tf_alturaLamias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19))
+                .addGap(7, 7, 7)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(tf_alturaLamias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(tf_AletasLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
+                .addGap(7, 7, 7)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(tf_AletasLamia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(tf_NBranquiasLamias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_NBranquiasLamias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21))
                 .addGap(33, 33, 33)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane3.addTab("Lamias", jPanel8);
-
-        jLabel22.setText("Nombre");
-
-        jLabel23.setText("Edad");
-
-        jLabel24.setText("Altura");
-
-        jButton6.setText("Agregar");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
-        jLabel34.setText("Hamadrades");
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap(78, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel23)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cb_Hamadrades, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton6)
-                        .addComponent(tf_nombreHamadrades1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tf_alturaHamadrade1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tf_edadHamadrades1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(323, 323, 323))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(cb_Hamadrades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_nombreHamadrades1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(tf_edadHamadrades1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24)
-                    .addComponent(tf_alturaHamadrade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addComponent(jButton6)
-                .addContainerGap(152, Short.MAX_VALUE))
-        );
-
-        jTabbedPane3.addTab("Amadriades", jPanel9);
 
         jLabel25.setText("Nombre");
 
@@ -283,7 +264,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel27.setText("Altura");
 
-        jButton7.setText("Aceptar");
+        jButton7.setText("Modificar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -293,6 +274,14 @@ public class Principal extends javax.swing.JFrame {
         jLabel28.setText("Numero de Alas");
 
         jLabel36.setText("Silfides");
+
+        jButton11.setBackground(new java.awt.Color(255, 0, 0));
+        jButton11.setText("Eliminar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -315,6 +304,10 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_alturaSilfides1)
                     .addComponent(tf_edadSilfides1))
                 .addGap(247, 247, 247))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton11)
+                .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,7 +334,9 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_NAlasSilfides1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane3.addTab("Silfides", jPanel10);
@@ -352,7 +347,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel31.setText("Altura");
 
-        jButton8.setText("Aceptar");
+        jButton8.setText("Modificar");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -362,6 +357,14 @@ public class Principal extends javax.swing.JFrame {
         jLabel32.setText("Numero de Alas");
 
         jLabel35.setText("Hamadrades");
+
+        jButton12.setBackground(new java.awt.Color(255, 0, 0));
+        jButton12.setText("Eliminar");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -377,20 +380,24 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(80, 80, 80)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cb_Salamandras, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cb_salamandras, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tf_nombreSalamandra1)
                     .addComponent(tf_edadSalamandras1)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_NAlasSalamandras1)
                     .addComponent(tf_alturaSalamandras1))
                 .addGap(211, 211, 211))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton12)
+                .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(81, 81, 81)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cb_Salamandras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_salamandras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel35))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -410,10 +417,88 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_NAlasSalamandras1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane3.addTab("Salamandras", jPanel11);
+
+        jLabel22.setText("Nombre");
+
+        jLabel23.setText("Edad");
+
+        jLabel24.setText("Altura");
+
+        jButton6.setText("Modificar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setText("Hamadrades");
+
+        jButton13.setBackground(new java.awt.Color(255, 0, 0));
+        jButton13.setText("Eliminar");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(tf_edadHamadrades1)
+                        .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf_alturaHamadrade1)
+                        .addComponent(cb_hamadrades, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(tf_nombreHamadrades1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(257, 257, 257))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton13)
+                .addContainerGap())
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(cb_hamadrades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_nombreHamadrades1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(tf_edadHamadrades1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(tf_alturaHamadrade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addComponent(jButton6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane3.addTab("Amadriades", jPanel9);
 
         javax.swing.GroupLayout jd_modificarLayout = new javax.swing.GroupLayout(jd_modificar.getContentPane());
         jd_modificar.getContentPane().setLayout(jd_modificarLayout);
@@ -429,6 +514,86 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jd_modificarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane3)
+                .addContainerGap())
+        );
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)));
+
+        cb_j2.setModel(new DefaultComboBoxModel()
+        );
+
+        cb_j1.setModel(new DefaultComboBoxModel());
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel37.setText("contra");
+
+        pb_j2.setValue(100);
+        pb_j2.setStringPainted(true);
+
+        pb_j1.setForeground(new java.awt.Color(102, 255, 102));
+        pb_j1.setValue(100);
+        pb_j1.setStringPainted(true);
+
+        jButton9.setText("Matarse a verga");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(75, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cb_j1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pb_j1, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pb_j2, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(cb_j2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(91, 91, 91))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(281, 281, 281)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_j2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_j1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel37))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pb_j2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pb_j1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(88, 88, 88)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(134, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jd_battleFieldLayout = new javax.swing.GroupLayout(jd_battleField.getContentPane());
+        jd_battleField.getContentPane().setLayout(jd_battleFieldLayout);
+        jd_battleFieldLayout.setHorizontalGroup(
+            jd_battleFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_battleFieldLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jd_battleFieldLayout.setVerticalGroup(
+            jd_battleFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_battleFieldLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -757,9 +922,19 @@ public class Principal extends javax.swing.JFrame {
         jMenu3.setText("Hadas");
 
         jMenuItem7.setText("Modificar");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem7);
 
         jMenuItem8.setText("Pelear");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem8);
 
         jMenuBar1.add(jMenu3);
@@ -793,6 +968,7 @@ public class Principal extends javax.swing.JFrame {
         if (seleccion == JFileChooser.APPROVE_OPTION) {
             AB.setArchivo(jfc.getSelectedFile());
             AB.CargarArchivo();
+            JOptionPane.showMessageDialog(this, "Archivo cargado exitosamente");
         }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -811,17 +987,17 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-     
+
         JFileChooser jfc = new JFileChooser();
         int seleccion = jfc.showSaveDialog(this);
         if (seleccion == JFileChooser.APPROVE_OPTION) {
             AB.setArchivo(jfc.getSelectedFile());
             AB.escribirArchivo();
             JOptionPane.showMessageDialog(this, "Archivo guardado exitosamente");
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, "El archivo no pudo ser guardado");
         }
-        
+
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -836,14 +1012,13 @@ public class Principal extends javax.swing.JFrame {
 
         Nombre = tf_nombreLamia.getText();
         edad = Integer.parseInt(tf_edadLamia.getText());
-        altura= Double.parseDouble(tf_alturaLamias.getText());
+        altura = Double.parseDouble(tf_alturaLamias.getText());
         branquias = Integer.parseInt(tf_NBranquiasLamias.getText());
         aletas = Integer.parseInt(tf_AletasLamia.getText());
 
         Hada h = new Lamias(aletas, branquias, Nombre, altura, edad, salud, poder);
 
         AB.getListaHadas().add(h);
-        
 
         JOptionPane.showMessageDialog(this, "Se a agregado exitosamente");
 
@@ -860,12 +1035,11 @@ public class Principal extends javax.swing.JFrame {
 
         Nombre = tf_nombreHamadrades.getText();
         edad = Integer.parseInt(tf_edadHamadrades.getText());
-        altura= Float.parseFloat(tf_alturaHamadrade.getText());
+        altura = Float.parseFloat(tf_alturaHamadrade.getText());
 
-        Hada h = new Hamadriades(saludArbol, Nombre, altura, edad, salud, poder) ;
+        Hada h = new Hamadriades(saludArbol, Nombre, altura, edad, salud, poder);
 
         AB.getListaHadas().add(h);
-        
 
         JOptionPane.showMessageDialog(this, "Se a agregado exitosamente");
 
@@ -883,10 +1057,10 @@ public class Principal extends javax.swing.JFrame {
         alas = Integer.parseInt(tf_NAlasSilfides.getText());
         Nombre = tf_nombreSilfides.getText();
         edad = Integer.parseInt(tf_edadSilfides.getText());
-        altura= Integer.parseInt(tf_alturaSilfides.getText());
+        altura = Integer.parseInt(tf_alturaSilfides.getText());
 
         AB.getListaHadas().add(new Silfides(alas, Nombre, altura, edad, salud, poder));
-       
+
         JOptionPane.showMessageDialog(this, "Se a agregado exitosamente");
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -901,7 +1075,7 @@ public class Principal extends javax.swing.JFrame {
 
         Nombre = tf_nombreSalamandra.getText();
         edad = Integer.parseInt(tf_edadSalamandras.getText());
-        altura= Integer.parseInt(tf_alturaSalamandras.getText());
+        altura = Integer.parseInt(tf_alturaSalamandras.getText());
         alas = Integer.parseInt(tf_NAlasSalamandras.getText());
 
         AB.getListaHadas().add(new Salamandras(alas, Nombre, altura, poder, salud, edad));
@@ -911,30 +1085,28 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-       System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
         String Nombre;
         int edad;
-        float altura;
-        float salud = 475;
-        float poder = 57;
+        double altura;
         int branquias;
         int aletas;
 
         Nombre = tf_nombreLamia1.getText();
         edad = Integer.parseInt(tf_edadLamia1.getText());
-        altura= Float.parseFloat(tf_alturaLamias1.getText());
+        altura = Double.parseDouble(tf_alturaLamias1.getText());
         branquias = Integer.parseInt(tf_NBranquiasLamias1.getText());
         aletas = Integer.parseInt(tf_AletasLamia1.getText());
 
         cb_lamias.getItemAt(cb_lamias.getSelectedIndex()).setNombre(Nombre);
-        cb_lamias.getItemAt(cb_lamias.getSelectedIndex()).setEstatura(altura);
+        cb_lamias.getItemAt(cb_lamias.getSelectedIndex()).setAltura(altura);
         cb_lamias.getItemAt(cb_lamias.getSelectedIndex()).setEdad(edad);
-        cb_lamias.getItemAt(cb_lamias.getSelectedIndex()).setBranquias(branquias);
-        cb_lamias.getItemAt(cb_lamias.getSelectedIndex()).setAleta(aletas);
+        cb_lamias.getItemAt(cb_lamias.getSelectedIndex()).setNumero_branquias(branquias);
+        cb_lamias.getItemAt(cb_lamias.getSelectedIndex()).setLogitud_aleta(aletas);
 
         JOptionPane.showMessageDialog(this, "Se a modificado exitosamente");
 
@@ -944,18 +1116,15 @@ public class Principal extends javax.swing.JFrame {
 
         String Nombre;
         int edad;
-        float altura;
-        float salud = 373;
-        float poder = 78;
-        float saludArbol = 173;
+        double altura;
 
         Nombre = tf_nombreHamadrades1.getText();
         edad = Integer.parseInt(tf_edadHamadrades1.getText());
-        altura= Float.parseFloat(tf_alturaHamadrade1.getText());
+        altura = Double.parseDouble(tf_alturaHamadrade1.getText());
 
-        cb_Hamadrades.getItemAt(cb_Hamadrades.getSelectedIndex()).setNombre(Nombre);
-        cb_Hamadrades.getItemAt(cb_Hamadrades.getSelectedIndex()).setEstatura(altura);
-        cb_Hamadrades.getItemAt(cb_Hamadrades.getSelectedIndex()).setEdad(edad);
+        cb_hamadrades.getItemAt(cb_hamadrades.getSelectedIndex()).setNombre(Nombre);
+        cb_hamadrades.getItemAt(cb_hamadrades.getSelectedIndex()).setAltura(altura);
+        cb_hamadrades.getItemAt(cb_hamadrades.getSelectedIndex()).setEdad(edad);
 
         JOptionPane.showMessageDialog(this, "Se a modificado exitosamente");
 
@@ -966,19 +1135,17 @@ public class Principal extends javax.swing.JFrame {
         int alas;
         String Nombre;
         int edad;
-        float altura;
-        float salud = 563;
-        float poder = 67;
+        double altura;
 
         alas = Integer.parseInt(tf_NAlasSilfides1.getText());
         Nombre = tf_nombreSilfides1.getText();
         edad = Integer.parseInt(tf_edadSilfides1.getText());
-        altura= Float.parseFloat(tf_alturaSilfides1.getText());
+        altura = Double.parseDouble(tf_alturaSilfides1.getText());
 
         cb_silfides.getItemAt(cb_silfides.getSelectedIndex()).setNombre(Nombre);
-        cb_silfides.getItemAt(cb_silfides.getSelectedIndex()).setEstatura(altura);
+        cb_silfides.getItemAt(cb_silfides.getSelectedIndex()).setAltura(altura);
         cb_silfides.getItemAt(cb_silfides.getSelectedIndex()).setEdad(edad);
-        cb_silfides.getItemAt(cb_silfides.getSelectedIndex()).setAlas(alas);
+        cb_silfides.getItemAt(cb_silfides.getSelectedIndex()).setCant_alas(alas);
 
         JOptionPane.showMessageDialog(this, "Se a modificado exitosamente");
 
@@ -988,22 +1155,259 @@ public class Principal extends javax.swing.JFrame {
 
         String Nombre;
         int edad;
-        float altura;
-        float salud = 683;
-        float poder = 71;
+        Double altura;
         int alas;
 
         Nombre = tf_nombreSalamandra1.getText();
         edad = Integer.parseInt(tf_edadSalamandras1.getText());
-        altura= Float.parseFloat(tf_alturaSalamandras1.getText());
+        altura = Double.parseDouble(tf_alturaSalamandras1.getText());
         alas = Integer.parseInt(tf_NAlasSalamandras1.getText());
 
-        cb_Salamandras.getItemAt(cb_Salamandras.getSelectedIndex()).setNombre(Nombre);
-        cb_Salamandras.getItemAt(cb_Salamandras.getSelectedIndex()).setEstatura(altura);
-        cb_Salamandras.getItemAt(cb_Salamandras.getSelectedIndex()).setEdad(edad);
-        cb_Salamandras.getItemAt(cb_Salamandras.getSelectedIndex()).setAlas(alas);
+        cb_salamandras.getItemAt(cb_salamandras.getSelectedIndex()).setNombre(Nombre);
+        cb_salamandras.getItemAt(cb_salamandras.getSelectedIndex()).setAltura(altura);
+        cb_salamandras.getItemAt(cb_salamandras.getSelectedIndex()).setEdad(edad);
+        cb_salamandras.getItemAt(cb_salamandras.getSelectedIndex()).setCant_alas(alas);
 
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+
+        ///Llenar los combobox
+        model = new DefaultComboBoxModel();
+        for (Hada t : AB.getListaHadas()) {
+            model.addElement(t);
+
+        }
+        cb_j1.setModel(model);
+
+        model = new DefaultComboBoxModel();
+        for (Hada t : AB.getListaHadas()) {
+            model.addElement(t);
+
+        }
+        cb_j2.setModel(model);
+
+        jd_battleField.setModal(true);
+        jd_battleField.pack();
+        jd_battleField.setLocationRelativeTo(this);
+        jd_battleField.setResizable(false);
+        jd_battleField.setVisible(true);
+
+
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        try {
+            ActualizarCB();
+        } catch (Exception e) {
+        }
+
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    public void ActualizarCB() {
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+
+        for (Hada t : AB.getListaHadas()) {
+            if (t instanceof Silfides) {
+                model.addElement(t);
+            }
+        }
+        cb_silfides.setModel(model);
+
+        model = new DefaultComboBoxModel();
+        for (Hada t : AB.getListaHadas()) {
+            if (t instanceof Salamandras) {
+                model.addElement(t);
+            }
+        }
+        cb_salamandras.setModel(model);
+        model = new DefaultComboBoxModel();
+        for (Hada t : AB.getListaHadas()) {
+            if (t instanceof Hamadriades) {
+                model.addElement(t);
+            }
+        }
+        cb_hamadrades.setModel(model);
+        model = new DefaultComboBoxModel();
+        for (Hada t : AB.getListaHadas()) {
+            if (t instanceof Lamias) {
+                model.addElement(t);
+            }
+        }
+        cb_lamias.setModel(model);
+
+        jd_modificar.setModal(true);
+        jd_modificar.pack();
+        jd_modificar.setLocationRelativeTo(this);
+        jd_modificar.setResizable(false);
+        jd_modificar.setVisible(true);
+
+    }
+
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_lamias.getModel();
+        Hada hada = (Hada) modelo.getElementAt(cb_lamias.getSelectedIndex());
+        AB.getListaHadas().remove(hada);
+        JOptionPane.showMessageDialog(jd_modificar, "Hada eliminada");
+        try {
+            ActualizarCB();
+        } catch (Exception e) {
+        }
+
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_silfides.getModel();
+        Hada hada = (Hada) modelo.getElementAt(cb_lamias.getSelectedIndex());
+        AB.getListaHadas().remove(hada);
+        JOptionPane.showMessageDialog(jd_modificar, "Hada eliminada");
+        try {
+            ActualizarCB();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_salamandras.getModel();
+        Hada hada = (Hada) modelo.getElementAt(cb_lamias.getSelectedIndex());
+        AB.getListaHadas().remove(hada);
+        JOptionPane.showMessageDialog(jd_modificar, "Hada eliminada");
+        try {
+            ActualizarCB();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_hamadrades.getModel();
+        Hada hada = (Hada) modelo.getElementAt(cb_lamias.getSelectedIndex());
+        AB.getListaHadas().remove(hada);
+        JOptionPane.showMessageDialog(jd_modificar, "Hada eliminada");
+        try {
+            ActualizarCB();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    
+        
+        if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Salamandras) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Hamadriades) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+
+        if (hb1.getPlayer1() instanceof Salamandras && hb2.getPlayer2() instanceof Silfides) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Salamandras && hb2.getPlayer2() instanceof Hamadriades) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Salamandras && hb2.getPlayer2() instanceof Salamandras) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Lamias) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Hamadriades && hb2.getPlayer2() instanceof Silfides) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb1.start();
+            hb2.start();
+        }
+
+        if (hb1.getPlayer1() instanceof Lamias && hb2.getPlayer2() instanceof Silfides) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+
+        if (hb1.getPlayer1() instanceof Lamias && hb2.getPlayer2() instanceof Salamandras) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Salamandras && hb2.getPlayer2() instanceof Lamias) {
+           hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+
+        if (hb1.getPlayer1() instanceof Lamias && hb2.getPlayer2() instanceof Hamadriades) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Lamias && hb2.getPlayer2() instanceof Lamias) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Silfides && hb2.getPlayer2() instanceof Lamias) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Silfides && hb2.getPlayer2() instanceof Salamandras) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Silfides && hb2.getPlayer2() instanceof Hamadriades) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+        if (hb1.getPlayer1() instanceof Silfides && hb2.getPlayer2() instanceof Silfides) {
+            hb1 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+            hb2 = new HiloBatalla(pb_j1, pb_j2, (Hada) cb_j1.getSelectedItem(), (Hada) cb_j2.getSelectedItem());
+
+            hb1.start();
+            hb2.start();
+        }
+
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1041,11 +1445,17 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<Hamadriades> cb_Hamadrades;
-    private javax.swing.JComboBox<Salamandras> cb_Salamandras;
+    private javax.swing.JComboBox<Hamadriades> cb_hamadrades;
+    private javax.swing.JComboBox<String> cb_j1;
+    private javax.swing.JComboBox<String> cb_j2;
     private javax.swing.JComboBox<Lamias> cb_lamias;
+    private javax.swing.JComboBox<Salamandras> cb_salamandras;
     private javax.swing.JComboBox<Silfides> cb_silfides;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1053,6 +1463,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1083,6 +1494,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1099,6 +1511,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel3;
@@ -1109,7 +1522,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JDialog jd_battleField;
     private javax.swing.JDialog jd_modificar;
+    private javax.swing.JProgressBar pb_j1;
+    private javax.swing.JProgressBar pb_j2;
     private javax.swing.JTextField tf_AletasLamia;
     private javax.swing.JTextField tf_AletasLamia1;
     private javax.swing.JTextField tf_NAlasSalamandras;
